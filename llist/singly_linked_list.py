@@ -10,11 +10,11 @@ class SinglyLinkedList():
         self._tail: Union[None, SinglyNode] = None
     
     @property
-    def head(self):
+    def head(self) -> SinglyNode:
         return self._head
     
     @head.setter
-    def head(self, node): 
+    def head(self, node: SinglyNode) -> None: 
         if self.size == 0:
             self._head = node
         else:
