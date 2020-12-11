@@ -17,7 +17,13 @@ my_llist = SinglyLinkedList()
 # Add element, equivalent to append in a list
 my_llist.head = SinglyNode(3)
 
-# Get nodes
+# Get last element with tail
+print(my_llist.tail.value)
+
+# Add an element at the first
+my_llist.addFirst(SinglyNode('a'))
+
+# Get first element
 print(my_llist.head)
 
 ```
