@@ -1,4 +1,4 @@
-from typing import Callable, Union
+from typing import Optional
 from typing import Dict
 
 from llist.node import SinglyNode
@@ -6,8 +6,8 @@ from llist.node import SinglyNode
 class SinglyLinkedList():
     def __init__(self) -> None:
         self.size: int = 0
-        self._head: Union[None, SinglyNode] = None
-        self._tail: Union[None, SinglyNode] = None
+        self._head: Optional[SinglyNode] = None
+        self._tail: Optional[SinglyNode] = None
     
     @property
     def head(self) -> SinglyNode:
@@ -23,11 +23,16 @@ class SinglyLinkedList():
             while True:
                 if _node.next == None:
                     _node.next = node
+                    self._tail = node
                     break
                 
                 _node = _node.next
         
         self.size += 1
+    
+    @property
+    def tail(self) -> SinglyNode:
+        return self._tail
     
     # def map(self, fn: Callable) -> None:
     #     node = self._head
