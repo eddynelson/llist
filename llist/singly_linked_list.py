@@ -1,5 +1,4 @@
 from typing import Optional
-from typing import Dict
 
 from llist.node import SinglyNode
 
@@ -35,8 +34,7 @@ class SinglyLinkedList():
         return self._tail
     
     def add_first(self, node: SinglyNode) -> None:
-        temp_next = self._head.next
-        node.next = temp_next
+        node.next = self._head
         self._head = node
         self.size += 1
     
