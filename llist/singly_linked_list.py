@@ -34,6 +34,11 @@ class SinglyLinkedList():
     def tail(self) -> SinglyNode:
         return self._tail
     
+    def addFirst(self, node: SinglyNode) -> None:
+        temp_next = self._head.next
+        node.next = temp_next
+        self._head = node
+    
     # def map(self, fn: Callable) -> None:
     #     node = self._head
         
