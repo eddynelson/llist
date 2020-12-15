@@ -9,19 +9,18 @@ This is a implementation of the data structure algorithms Single linked list and
 ``` python
 
 from llist import SinglyLinkedList
-from llist.node import SinglyNode
 
 # Create a singly linked list
 my_llist = SinglyLinkedList()
 
 # Add element, equivalent to append in a list
-my_llist.head = SinglyNode(3)
+my_llist.head = 3
 
 # Get last element with tail
 print(my_llist.tail.value)
 
 # Add an element at the first
-my_llist.addFirst(SinglyNode('a'))
+my_llist.addFirst('a')
 
 # Get first element
 print(my_llist.head)
