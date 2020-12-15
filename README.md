@@ -20,7 +20,7 @@ my_llist.head = 3
 print(my_llist.tail.value)
 
 # Add an element at the first
-my_llist.addFirst('a')
+my_llist.add_first('a')
 
 # Get first element
 print(my_llist.head)
