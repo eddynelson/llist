@@ -1,3 +1,4 @@
+from typing import Any
 from typing import Optional
 
 from llist.node import SinglyNode
@@ -13,7 +14,9 @@ class SinglyLinkedList():
         return self._head
     
     @head.setter
-    def head(self, node: SinglyNode) -> None:
+    def head(self, value: int) -> None:
+        node: SinglyNode = SinglyNode(value)
+        
         if self.size == 0:
             self._head = node
         else:
@@ -33,7 +36,8 @@ class SinglyLinkedList():
     def tail(self) -> SinglyNode:
         return self._tail
     
-    def add_first(self, node: SinglyNode) -> None:
+    def add_first(self, value: Any) -> None:
+        node: SinglyNode = SinglyNode(value)
         node.next = self._head
         self._head = node
         self.size += 1
